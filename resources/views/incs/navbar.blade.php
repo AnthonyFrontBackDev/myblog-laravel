@@ -20,6 +20,11 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         @if (Auth::user())
+          @if(Auth::user()->role === 'ADMIN' )
+          <li class="nav-item active">
+            <a class="nav-link" href=" {{ route('articles.index') }} ">Espace Admin</a>
+          </li>              
+          @endif
           <li class="nav-item">
             <form action=" {{ route('logout') }} " method="post">
               @csrf
