@@ -23,8 +23,13 @@
             <div class="col-12">
                 <div class="form-group">
                 <label>Contenu</label>
-                <textarea name="content" class="form-control w-100"></textarea>
+                <textarea id="tinycme-editor" name="content" class="form-control w-100"></textarea>
             </div>
+            <script>
+            tinymce.init({
+                selector:'#tinycme-editor'
+            });
+            </script>
         </div>
         <div class="d-flex justify-content-center mt-5">
             <button class="btn btn-primary" type="submit">Poster votre article</button>
